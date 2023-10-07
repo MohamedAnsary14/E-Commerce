@@ -1,0 +1,30 @@
+/* *{
+    box-sizing: border-box;
+} */
+#product{
+    position: relative;
+    border-radius: 5px;
+
+    cursor: pointer; 
+    transition: all 1s;
+}
+#product:hover{
+    box-shadow: 0px 0px 7px black;
+   
+    
+}
+
+#btn{
+    margin: auto;
+    display: none;
+    position: absolute;
+    bottom: -100px;
+    left: -5px;
+    transition: all 1s;
+  
+}
+#product:hover #btn{
+    display: block;
+    bottom: -10px;
+
+}
