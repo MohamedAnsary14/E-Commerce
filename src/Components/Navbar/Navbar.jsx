@@ -12,13 +12,13 @@ export default function Navbar() {
     function logout() {
         localStorage.removeItem('tkn')
         setToken(null);
-        navFunc('/login')
+        navFunc('/')
     }
     return <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 fixed-top ">
             <div className="container d-flex justify-content-between ">
                 <i id={styles.logo} className="fa-solid fa-cart-shopping fs-2"></i>
-                <Link className="navbar-brand fw-bold" to="#">fresh cart</Link>
+                <Link className="navbar-brand fw-bold" to="/home">fresh cart</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -65,7 +65,7 @@ export default function Navbar() {
                                     <Link className="nav-link" to="/register">Register</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/login">Login</Link>
+                                    <Link className="nav-link" to="/">Login</Link>
                                 </li>
                             </ul>
 

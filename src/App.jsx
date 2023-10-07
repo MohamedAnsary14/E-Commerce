@@ -25,17 +25,17 @@ import NotFound from './Components/NotFound/NotFound'
 const myRouter = createHashRouter([
   {
     path: "/", element: <Layout />, children: [
-      { index: true, element: <Register /> },
+      { index: true, element: <Login /> },
       { path: "brands", element: <ProtectedRoute><Brands /></ProtectedRoute> },
       { path: "cart", element: <ProtectedRoute><Cart /></ProtectedRoute> },
       { path: "categories", element: <ProtectedRoute><Categories /></ProtectedRoute> },
       { path: "home", element: <ProtectedRoute><Home /></ProtectedRoute> },
       { path: "productDetails/:id", element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
       { path: "payment", element: <ProtectedRoute><Payment /></ProtectedRoute> },
-      { path: "login", element: <Login /> },
+      { path: "register", element: <Register /> },
       { path: "forget", element: <Forgetpassword /> },
       { path: "products", element: <ProtectedRoute><Products /></ProtectedRoute> },
-      { path: "register", element: <Register /> },
+      
       { path: "wishlist", element: <ProtectedRoute><Wishlist /></ProtectedRoute> },
       { path: '*', element: <NotFound /> }
 
