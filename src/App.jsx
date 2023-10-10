@@ -25,11 +25,11 @@ import NotFound from './Components/NotFound/NotFound'
 const myRouter = createHashRouter([
   {
     path: "/", element: <Layout />, children: [
-      { index: true, element: <Login /> },
+      { path: "login", element: <Login /> },
       { path: "brands", element: <ProtectedRoute><Brands /></ProtectedRoute> },
       { path: "cart", element: <ProtectedRoute><Cart /></ProtectedRoute> },
       { path: "categories", element: <ProtectedRoute><Categories /></ProtectedRoute> },
-      { path: "home", element: <ProtectedRoute><Home /></ProtectedRoute> },
+      { index: true, element: <ProtectedRoute><Home /></ProtectedRoute> },
       { path: "productDetails/:id", element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
       { path: "payment", element: <ProtectedRoute><Payment /></ProtectedRoute> },
       { path: "register", element: <Register /> },
